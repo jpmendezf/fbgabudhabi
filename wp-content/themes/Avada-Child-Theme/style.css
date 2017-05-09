@@ -66,3 +66,7 @@
 .checkout-button, #place_order {
 	background: #00447c !important;
 }
+
+.single-company #sidebar {
+	display: none;
+}
