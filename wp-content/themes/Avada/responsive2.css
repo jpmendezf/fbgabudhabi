@@ -1,0 +1,75 @@
+@media only screen and (max-width: 1100px){
+	#side-header, .side-header-background{
+		background-color:#ed174f !important;
+	}
+	
+}
+.fusion-mobile-menu-icons{
+   margin-top:0px !important;
+}
+.fusion-mobile-menu-icons a{
+	color:#FFF !important;
+}
+
+#set_position_on_owl_sponsors .fusion-nav-prev{
+   left:7px !important;
+}
+#set_position_on_owl_sponsors .fusion-nav-next{
+   right:7px !important;
+}
+
+#set_position_on_owl_buttons .fusion-nav-prev{
+  left:7px !important;
+}
+#set_position_on_owl_buttons .fusion-nav-next{
+  right:7px !important;
+}
+@media (max-width: 414px){
+	.our-team-carousel .fusion-carousel-overlay {
+		text-align:justify !important;
+		padding-left:20px !important;
+		padding-right:50px !important;
+	}
+	.post-content .banners {
+		 display: block !important; 
+	}
+
+	.home .set_different_color_for_right_triangle_2{
+	    width:100% !important;
+	}
+	.occupation_position_ahead{
+	   margin-bottom:15px !important;
+	   text-align:center !important;
+	}
+	.shaped-heading span{
+	   width:100% !important;
+	}
+	.our-team-carousel .fusion-carousel-overlay .otc-social, .our-team-carousel .fusion-carousel-overlay .otc-social:hover{
+	   background-color:#2e4778 !important;
+	   color:#FFF !important;
+	}
+	.our-team-carousel .otc-social:before{
+	   color:#FFF !important;
+	}
+	.overlay-cards .fusion-carousel-thumbnail-image{
+	   background-size: contain !important;
+	}
+	.set_different_color_for_right_triangle .set_bg_for_item img{
+	   object-fit: contain !important;
+	}
+	.set_different_color_for_right_triangle .m_name_of_person p{
+	    text-align:center !important;
+	}
+
+	.include_search_on_list_categories_top{
+	    max-width:240px !important;
+	}
+	.m_events_in_future{
+	   width:100% !important;
+	}
+}
+
+@media (max-width: 736px)
+@media all and (orientation: landscape) {
+}
+
