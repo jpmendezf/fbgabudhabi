@@ -8,7 +8,7 @@ if ( file_exists( dirname( __FILE__ ) . '/gd-config.php' ) ) {
  //Added by WP-Cache Manager
 define('WP_DEBUG', true);
 define('WP_DEBUG_DISPLAY', true);
-@ini_set('display_errors', 1);
+@ini_set('display_errors', 0);
 
 
 define('WP_MEMORY_LIMIT', '512M');
