@@ -713,7 +713,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 				$this->set_cookies_cart_hash( $cart );
 			}
 		}
-	} // end Avada_Woocommerce() class.
+	}
 } else {
 	//
 }
