@@ -678,7 +678,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * @param  array $cart WC variable holding contents of the cart without language information.
 		 * @return string Cart hash with language information
 		 */
-		private function get_cart_hash( $cart ) {
+		function get_cart_hash( $cart ) {
 
 			$lang = Avada_Multilingual::get_active_language();
 			return md5( wp_json_encode( $cart ) . $lang );
@@ -693,7 +693,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * @since 5.0.2
 		 * @param array $cart wc variable holding contents of the cart without language information.
 		 */
-		private function set_cookies_cart_hash( $cart ) {
+		function set_cookies_cart_hash( $cart ) {
 
 			$hash = $this->get_cart_hash( $cart );
 			wc_setcookie( 'woocommerce_cart_hash', $hash );
@@ -708,7 +708,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * @since 5.0.2
 		 * @param WC_Cart $wc_cart wc object without language information.
 		 */
-		public function cart_loaded_from_session( $wc_cart ) {
+		function cart_loaded_from_session( $wc_cart ) {
 
 			if ( headers_sent() || ! $wc_cart ) {
 				return;
@@ -726,7 +726,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * @since 5.0.2
 		 * @param bool $set is true if cookies need to be set, otherwse they are unset in calling function.
 		 */
-		public function set_cart_cookies( $set ) {
+		function set_cart_cookies( $set ) {
 
 			if ( $set ) {
 				$wc = WC();
