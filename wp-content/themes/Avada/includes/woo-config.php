@@ -146,8 +146,9 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Add content before the container.
 		 *
+		 * @access public
 		 */
-		function before_container() {
+		public function before_container() {
 			ob_start();
 			Avada()->layout->add_class( 'content_class' );
 			$content_class = ob_get_clean();
@@ -162,23 +163,26 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Returns false.
 		 *
+		 * @access public
 		 * @return false
 		 */
-		function shop_title() {
+		public function shop_title() {
 			return false;
 		}
 
 		/**
 		 * Closes 2 divs that were previously opened.
 		 *
+		 * @access public
 		 */
-		function after_container() {
+		public function after_container() {
 			echo '</div></div>';
 		}
 
 		/**
 		 * Adds the sidebar.
 		 *
+		 * @access public
 		 */
 		function add_sidebar() {
 			do_action( 'avada_after_content' );
@@ -187,8 +191,9 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Prints the out of stock warning.
 		 *
+		 * @access public
 		 */
-		function avada_show_product_loop_outofstock_flash() {
+		public function avada_show_product_loop_outofstock_flash() {
 			global $product; ?>
 			<?php if ( ! $product->is_in_stock() ) : ?>
 				<div class="fusion-out-of-stock">
@@ -202,8 +207,9 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Adds the link to permalink.
 		 *
+		 * @access public
 		 */
-		function avada_woocommerce_before_shop_loop_item_title_open() {
+		public function avada_woocommerce_before_shop_loop_item_title_open() {
 			?>
 			<a href="<?php the_permalink(); ?>" class="product-images">
 			<?php
@@ -212,8 +218,9 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Closes the link.
 		 *
+		 * @access public
 		 */
-		function avada_woocommerce_before_shop_loop_item_title_close() {
+		public function avada_woocommerce_before_shop_loop_item_title_close() {
 			?>
 			</a>
 			<?php
@@ -222,6 +229,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Content before the item buttons.
 		 *
+		 * @access public
 		 */
 		function before_shop_item_buttons() {
 			global $post;
@@ -479,8 +487,9 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * The account dashboard.
 		 *
+		 * @access public
 		 */
-		function avada_woocommerce_account_dashboard() {
+		public function avada_woocommerce_account_dashboard() {
 			?>
 			<style>
 			.woocommerce-MyAccount-content{ display: -webkit-flex;display: -ms-flexbox;display:flex;-webkit-flex-flow: column wrap;flex-flow: column nowrap; }
@@ -495,8 +504,9 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Content injected before the content heading.
 		 *
+		 * @access public
 		 */
-		function avada_woocommerce_before_account_content_heading() {
+		public function avada_woocommerce_before_account_content_heading() {
 			if ( is_account_page() ) {
 				$account_items = wc_get_account_menu_items();
 				$heading_content = __( 'Dashboard', 'Avada' );
@@ -521,10 +531,11 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * WooCommerce pre 2.6 compatibility functions.
 		 *
+		 * @access public
 		 * @param string|int $order_count  The number of posts in the query.
 		 * @param bool       $edit_address If we want to edit the address or not.
 		 */
-		function avada_woocommerce_pre26_before_my_account( $order_count, $edit_address = false ) {
+		public function avada_woocommerce_pre26_before_my_account( $order_count, $edit_address = false ) {
 			global $woocommerce;
 			$edit_address = is_wc_endpoint_url( 'edit-address' );
 
@@ -579,6 +590,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Edit account form.
 		 *
+		 * @access public
 		 * @param array $args The arguments.
 		 */
 		function avada_woocommerce_pre26_after_my_account( $args ) {
@@ -644,11 +656,12 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * Dealing with mini-cart cache in internal browser storage.
 		 * Response to action 'woocommerce_add_to_cart_hash', which overwrites the default WC cart hash and cookies.
 		 *
+		 * @access public
 		 * @since 5.0.2
 		 * @param string $hash Default WC hash.
 		 * @param array  $cart WC variable holding contents of the cart without language information.
 		 */
-		function add_to_cart_hash( $hash, $cart ) {
+		public function add_to_cart_hash( $hash, $cart ) {
 
 			$hash = $this->get_cart_hash( $cart );
 			if ( ! headers_sent() ) {
@@ -660,35 +673,42 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Dealing with mini-cart cache in internal browser storage.
 		 *
+		 * @access private
 		 * @since 5.0.2
 		 * @param  array $cart WC variable holding contents of the cart without language information.
 		 * @return string Cart hash with language information
 		 */
-		function get_cart_hash( $cart ) {
+		private function get_cart_hash( $cart ) {
+
 			$lang = Avada_Multilingual::get_active_language();
 			return md5( wp_json_encode( $cart ) . $lang );
+
 		}
 
 		/**
 		 * Dealing with mini-cart cache in internal browser storage.
 		 * Sets 'woocommerce_cart_hash' cookie.
 		 *
+		 * @access private
 		 * @since 5.0.2
 		 * @param array $cart wc variable holding contents of the cart without language information.
 		 */
-		function set_cookies_cart_hash( $cart ) {
+		private function set_cookies_cart_hash( $cart ) {
+
 			$hash = $this->get_cart_hash( $cart );
 			wc_setcookie( 'woocommerce_cart_hash', $hash );
+
 		}
 
 		/**
 		 * Dealing with mini-cart cache in internal browser storage.
 		 * Response to action 'woocommerce_cart_loaded_from_session'.
 		 *
+		 * @access public
 		 * @since 5.0.2
 		 * @param WC_Cart $wc_cart wc object without language information.
 		 */
-		function cart_loaded_from_session( $wc_cart ) {
+		public function cart_loaded_from_session( $wc_cart ) {
 
 			if ( headers_sent() || ! $wc_cart ) {
 				return;
@@ -702,10 +722,12 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * Dealing with mini-cart cache in internal browser storage.
 		 * Response to action 'woocommerce_set_cart_cookies', which overwrites the default WC cart hash and cookies.
 		 *
+		 * @access public
 		 * @since 5.0.2
 		 * @param bool $set is true if cookies need to be set, otherwse they are unset in calling function.
 		 */
-		function set_cart_cookies( $set ) {
+		public function set_cart_cookies( $set ) {
+
 			if ( $set ) {
 				$wc = WC();
 				$wc_cart = $wc->cart;
@@ -713,10 +735,8 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 				$this->set_cookies_cart_hash( $cart );
 			}
 		}
-	}
-	
-} else {
-	//
+
+	} // end Avada_Woocommerce() class.
 }
 
 add_filter( 'get_product_search_form', 'avada_product_search_form' );
@@ -1030,6 +1050,7 @@ function avada_woocommerce_get_catalog_ordering_args( $args ) {
  * The fusion_order_by_rating_post_clauses function.
  *
  * @since 5.0.0
+ * @access public
  * @param array $args The arguments array.
  * @return array The altered arguments array.
  */
@@ -1057,6 +1078,7 @@ function remove_fusion_remove_ordering_args_filters() {
 /**
  * The fusion_order_by_rating_post_clauses function.
  *
+ * @access public
  * @param array $args The arguments array.
  * @return array The altered arguments array.
  */
