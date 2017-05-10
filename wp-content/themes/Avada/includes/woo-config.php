@@ -664,7 +664,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * @param  array $cart WC variable holding contents of the cart without language information.
 		 * @return string Cart hash with language information
 		 */
-		private function get_cart_hash( $cart ) {
+		function get_cart_hash( $cart ) {
 			$lang = Avada_Multilingual::get_active_language();
 			return md5( wp_json_encode( $cart ) . $lang );
 		}
@@ -676,7 +676,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * @since 5.0.2
 		 * @param array $cart wc variable holding contents of the cart without language information.
 		 */
-		private function set_cookies_cart_hash( $cart ) {
+		function set_cookies_cart_hash( $cart ) {
 			$hash = $this->get_cart_hash( $cart );
 			wc_setcookie( 'woocommerce_cart_hash', $hash );
 		}
