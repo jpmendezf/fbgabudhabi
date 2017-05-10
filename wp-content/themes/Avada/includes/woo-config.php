@@ -661,7 +661,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * @param string $hash Default WC hash.
 		 * @param array  $cart WC variable holding contents of the cart without language information.
 		 */
-		public function add_to_cart_hash( $hash, $cart ) {
+		function add_to_cart_hash( $hash, $cart ) {
 
 			$hash = $this->get_cart_hash( $cart );
 			if ( ! headers_sent() ) {
