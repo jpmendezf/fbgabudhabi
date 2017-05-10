@@ -487,7 +487,6 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * The account dashboard.
 		 *
-		 * @access public
 		 */
 		function avada_woocommerce_account_dashboard() {
 			?>
