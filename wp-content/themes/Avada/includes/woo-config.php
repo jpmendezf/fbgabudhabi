@@ -489,7 +489,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 *
 		 * @access public
 		 */
-		public function avada_woocommerce_account_dashboard() {
+		function avada_woocommerce_account_dashboard() {
 			?>
 			<style>
 			.woocommerce-MyAccount-content{ display: -webkit-flex;display: -ms-flexbox;display:flex;-webkit-flex-flow: column wrap;flex-flow: column nowrap; }
