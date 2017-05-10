@@ -45,10 +45,10 @@ if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') $_SERVER['HTTPS']='on';
 define('DB_NAME', "fbgabudhabi");
 
 /** MySQL database username */
-define('DB_USER', "root");
+define('DB_USER', "forge");
 
 /** MySQL database password */
-define('DB_PASSWORD', "root");
+define('DB_PASSWORD', "aANzNl7JO0rFtm61q2gj");
 
 /** MySQL hostname */
 define('DB_HOST', "localhost:8889");
