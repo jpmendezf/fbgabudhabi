@@ -535,7 +535,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * @param string|int $order_count  The number of posts in the query.
 		 * @param bool       $edit_address If we want to edit the address or not.
 		 */
-		public function avada_woocommerce_pre26_before_my_account( $order_count, $edit_address = false ) {
+		function avada_woocommerce_pre26_before_my_account( $order_count, $edit_address = false ) {
 			global $woocommerce;
 			$edit_address = is_wc_endpoint_url( 'edit-address' );
 
