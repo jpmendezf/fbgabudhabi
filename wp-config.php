@@ -51,7 +51,7 @@ define('DB_USER', "forge");
 define('DB_PASSWORD', "aANzNl7JO0rFtm61q2gj");
 
 /** MySQL hostname */
-define('DB_HOST', "localhost:8889");
+define('DB_HOST', "localhost");
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
