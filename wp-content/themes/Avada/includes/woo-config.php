@@ -714,6 +714,7 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 			}
 		}
 	}
+	
 } else {
 	//
 }
