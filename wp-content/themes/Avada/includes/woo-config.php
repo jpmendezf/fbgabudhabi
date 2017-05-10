@@ -706,7 +706,6 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		 * @param bool $set is true if cookies need to be set, otherwse they are unset in calling function.
 		 */
 		function set_cart_cookies( $set ) {
-
 			if ( $set ) {
 				$wc = WC();
 				$wc_cart = $wc->cart;
@@ -714,8 +713,9 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 				$this->set_cookies_cart_hash( $cart );
 			}
 		}
-
 	} // end Avada_Woocommerce() class.
+} else {
+	//
 }
 
 add_filter( 'get_product_search_form', 'avada_product_search_form' );
