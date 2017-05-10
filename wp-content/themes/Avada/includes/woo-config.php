@@ -503,9 +503,8 @@ if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 		/**
 		 * Content injected before the content heading.
 		 *
-		 * @access public
 		 */
-		public function avada_woocommerce_before_account_content_heading() {
+		function avada_woocommerce_before_account_content_heading() {
 			if ( is_account_page() ) {
 				$account_items = wc_get_account_menu_items();
 				$heading_content = __( 'Dashboard', 'Avada' );
