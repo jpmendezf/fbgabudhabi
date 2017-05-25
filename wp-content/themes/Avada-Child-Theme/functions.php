@@ -5,12 +5,30 @@
 
 function theme_enqueue_styles()
 {	
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'avada-stylesheet' ), '5.9.1' );
+	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'avada-stylesheet' ), '5.18.3' );
 	// wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'avada-stylesheet' ) );
 	wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery', 'avada' ), '', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+
+
+// remove wp version param from any enqueued scripts
+function vc_remove_wp_ver_css_js( $src ) {
+    if ( strpos( $src, 'ver=' ) )
+        $src = remove_query_arg( 'ver', $src );
+    return $src;
+}
+// add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+// add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+
+// Remove ?pas= query string on hte image top-ad.jpg
+function _remove_script_version( $src ){
+    $parts = explode( 'pas=', $src );
+        return $parts[0];
+}
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 
 function avada_lang_setup() {
 	$lang = get_stylesheet_directory() . '/languages';

@@ -6,8 +6,8 @@ if ( file_exists( dirname( __FILE__ ) . '/gd-config.php' ) ) {
 	define( 'FS_CHMOD_FILE', ( 0604 & ~ umask() ) );
 }
  //Added by WP-Cache Manager
-define('WP_DEBUG', true);
-define('WP_DEBUG_DISPLAY', true);
+define('WP_DEBUG', false);
+define('WP_DEBUG_DISPLAY', false);
 @ini_set('display_errors', 0);
 
 
@@ -45,10 +45,10 @@ if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') $_SERVER['HTTPS']='on';
 define('DB_NAME', "fbgabudhabi");
 
 /** MySQL database username */
-define('DB_USER', "forge");
+define('DB_USER', "root");
 
 /** MySQL database password */
-define('DB_PASSWORD', "aANzNl7JO0rFtm61q2gj");
+define('DB_PASSWORD', "root");
 
 /** MySQL hostname */
 define('DB_HOST', "localhost");

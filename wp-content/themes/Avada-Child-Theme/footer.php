@@ -157,7 +157,7 @@ body .newsletter .form-group, body .newsletter .form-submit{
         position: absolute;
         top: 63px;
         right: 15px;
-        background: url(http://fbgabudhabi.com/wp-content/uploads/2017/01/m-right-arrow.png)!important;
+        background: url(https://www.fbgabudhabi.com/wp-content/uploads/2017/01/m-right-arrow.png)!important;
         display: block;
         width: 35px;
         height: 48px;
@@ -172,7 +172,7 @@ body .newsletter .form-group, body .newsletter .form-submit{
         position: absolute;
         top: 63px;
         left: 15px;
-        background: url(http://fbgabudhabi.com/wp-content/uploads/2017/01/m-left-arrow.png)!important;
+        background: url(https://www.fbgabudhabi.com/wp-content/uploads/2017/01/m-left-arrow.png)!important;
         display: block;
         width: 35px;
         height: 48px;

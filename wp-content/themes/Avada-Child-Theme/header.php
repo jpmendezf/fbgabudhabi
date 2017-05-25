@@ -165,7 +165,7 @@ jQuery('#span_value_80').html('<?php echo $_POST["input_80"] ?>');
 										$button_class = 'btn-primary';
 									}
 
-									$languages_html .= '<a href="' . $lang_value['url'] . '" class="btn ' . $button_class . '">' . $lang_value['native_name'] . '</a>';
+									$languages_html .= '<a href="' . $lang_value['url'] . '" class="btn ' . $button_class . '">' . $lang_value['native_name'] . '</a>&nbsp;';
 
 								}
 							}
@@ -250,11 +250,11 @@ jQuery('#span_value_80').html('<?php echo $_POST["input_80"] ?>');
 								_e( '115</span> CHAMBERS IN <span class="color-secondary">85</span> COUNTRIES', 'fbg' ); ?>
 							</div><a href="/en/discover-the-chambers/" class="fusion-button button-flat button-round btn-secondary"><?php echo _e( 'Discover the Chambers', 'fbg' ); ?></a>
 							<?php
-							$sinceimg = get_stylesheet_directory_uri().'/images/temp/since-1974.png';
+							$sinceimg = get_stylesheet_directory_uri().'/images/temp/since1974.svg';
 						} ?>
 					</div>
 					<div class="header-since">
-						<img src="<?php echo $sinceimg; ?>" alt="Since 1974">
+						<img src="<?php echo $sinceimg; ?>" alt="Since 1974" width="79" height="91" />
 					</div>
 				</div>
 			</div>

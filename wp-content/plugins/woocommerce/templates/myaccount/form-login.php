@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="set_login_img" style="float:left !important;">
             <a href="">
-                <img src="http://belpro.co/fbg/wp-content/uploads/2017/02/1b-1.jpg" alt="">	</a>
+                <img src="http://fbgabudhabi.com/wp-content/uploads/2017/02/1b-1.jpg" alt="">	</a>
             <div class="set_content_on_img_login"><?
                
                if(ICL_LANGUAGE_CODE=='fr') {

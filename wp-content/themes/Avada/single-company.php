@@ -17,9 +17,14 @@ if ( ! defined( 'ABSPATH' ) ) {
    padding-left:240px !important;
    margin-top:-20px !important;
 }
-.m_events_in_future{
-       max-width:330px !important;
-	}
+
+.members_overview_title {
+	max-width: 260px;
+}
+
+html[lang="fr-FR"] .members_overview_title  {
+	max-width: 300px;
+}
 
 @media (max-width: 414px){
    .fusion-footer{
@@ -503,7 +508,7 @@ else{
 }
 ?>
 
-<div class="m_events_in_future" style="margin-top:15px;">
+<div class="m_events_in_future members_overview_title" style="margin-top:15px;">
 	<h2 style="font-weight:normal !important;"><?=$strMbrOverview?></h2>
 
 </div>

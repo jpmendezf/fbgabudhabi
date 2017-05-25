@@ -1157,3 +1157,7 @@ html:lang(he-il) .rtl #wpadminbar *  {
 		display: none;
 	}
 }
+
+#wp-admin-bar-wpaas {
+	display: none;
+}

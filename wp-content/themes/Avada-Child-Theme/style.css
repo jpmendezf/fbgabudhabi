@@ -57,7 +57,7 @@
 	position: absolute;
 }
 
-.fusion-image-wrapper .fusion-rollover a:first-child {
+.single-avada_portfolio .fusion-image-wrapper .fusion-rollover a:first-child {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -69,4 +69,55 @@
 
 .single-company #sidebar {
 	display: none;
+}
+
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover a:first-child {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.post-13673 .fusion-image-wrapper .fusion-rollover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover:before {
+	display: none;
+}
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover .fusion-rollover-content {
+    z-index: 9999;
+    position: relative;
+}
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover .fusion-rollover-content a:first-child {
+    top: inherit;
+    left: inherit;
+    width: inherit;
+    height: inherit;
+    display: inline-block;
+    position: relative;
+}
+
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover .fusion-rollover-content .fusion-rollover-sep {
+	display: none;
+}
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover .fusion-rollover-content .fusion-rollover-title {
+	margin-top: 0;
+}
+
+.fotorama__wrap {
+	margin: 0 auto;
+}
+
+.ilightbox-overlay {
+	z-index: 9999999 !important;
+}
+
+.ilightbox-holder {
+	z-index: 9999999 !important;
 }

@@ -7,3 +7,105 @@
 .single-navigation a {
 	margin-right: 10px;
 }
+
+.galas-sponsors-and-partners--title {
+	padding: 20px 20px 0px 20px;
+	background: #000;
+	margin-bottom: 0px !important;
+}
+
+.galas-sponsors-and-partners--title .title-heading-left {
+	color: #95bd5a;
+	text-transform: uppercase;
+}
+
+.galas-sponsors-and-partners--slides {
+	background: #000;
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1100px)
+{
+	.title.galas-sponsors-and-partners--title {
+		margin-bottom: 0px !important;
+	}
+	.galas-sponsors-and-partners--title {
+		margin-bottom: 0px !important;
+	}
+}
+
+.fusion-carousel-item .websitelink {
+	margin-top: 0px;
+	line-height: 4px;
+}
+
+.fusion-carousel-item .websitelink a {
+	color: #333;
+}
+
+.sponsors-container .fusion-image-wrapper {
+	height: 125px !important;
+}
+
+#wpadminbar {
+	z-index: 99999999;
+}
+
+.single-avada_portfolio .related-posts .fusion-rollover a {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.single-avada_portfolio .fusion-image-wrapper .fusion-rollover a:first-child {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.checkout-button, #place_order {
+	background: #00447c !important;
+}
+
+.single-company #sidebar {
+	display: none;
+}
+
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover a:first-child {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.post-13673 .fusion-image-wrapper .fusion-rollover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover:before {
+	display: none;
+}
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover .fusion-rollover-content {
+    z-index: 9999;
+    position: relative;
+}
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover .fusion-rollover-content a:first-child {
+    top: inherit;
+    left: inherit;
+    width: inherit;
+    height: inherit;
+    display: inline-block;
+    position: relative;
+}
+
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover .fusion-rollover-content .fusion-rollover-sep {
+	display: none;
+}
+.post-13673 .fusion-image-wrapper:hover .fusion-rollover .fusion-rollover-content .fusion-rollover-title {
+	margin-top: 0;
+}
